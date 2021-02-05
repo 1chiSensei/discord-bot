@@ -15,4 +15,3 @@ d.compress = true
 let removeProc = d.addHandler(EventType.message_create, messageCreate)
 waitFor d.startSession()
 removeProc()
-© 2021 GitHub, Inc.
