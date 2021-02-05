@@ -1,12 +1,12 @@
 package main
 
 import (
-	'flag'
-	'fmt'
-	'os'
-	'os/signal'
-	'syscall'
-	'github.com/bwmarrin/discordgo'
+	"flag"
+	"fmt"
+	"os"
+	"os/signal"
+	"syscall"
+	"github.com/bwmarrin/discordgo"
 )
 
 var (
@@ -14,14 +14,14 @@ var (
 )
 
 func init() {
-	flag.StringVar(&Token, 't', '', 'Bot Token')
+	flag.StringVar(&Token, "t", "", "Bot Token")
 	flag.Parse()
 }
 
 func main() {
-	dg, err := discordgo.New('Bot ' + Token)
+	dg, err := discordgo.New("Bot " + Token)
 	if err != nil {
-		fmt.Println('error creating discord session, ' + err)
+		fmt.Println("error creating discord session, " + err)
 		return
 	}
 	
